@@ -6,11 +6,12 @@
 /*   By: afeuerst <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 13:34:00 by afeuerst          #+#    #+#             */
-/*   Updated: 2019/11/23 10:06:26 by afeuerst         ###   ########.fr       */
+/*   Updated: 2019/11/23 13:51:55 by afeuerst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_printf.h"
+#include <stdio.h>
 
 void					main_printf_family(void)
 {
@@ -26,6 +27,7 @@ void					main_array(char **argumements)
 	static const int	t2[] = {-24, 23, 10, 0};
 	static const char	string[] = "yolo la sandra de c mort\n";
 	static const char	*sarray[] = {"hello", "toto", NULL};
+	static const int	n1 = 0xFFFFFF96;
 
 	ft_printf("%[]c\n", "oh! a beauty array");
 	ft_printf("array = %[]c %[ ]c\n", "hello", "array");
@@ -59,6 +61,7 @@ void					main_array(char **argumements)
 	ft_printf("w: %[4 ]u\n", t1);
 	ft_printf("w: %#04[4 ]u\n", t1);
 	ft_printf("w: %#-04[4 ]u\n", t1);
+	ft_printf("h: %02hh[4 ]x\n", &n1);
 }
 
 int						main(int count, char **argumements)

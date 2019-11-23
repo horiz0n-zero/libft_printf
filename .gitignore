@@ -1,2 +1,5 @@
 *.o
+libft_printf.a
 main.dSYM
+main
+update_corewar_printf.sh
